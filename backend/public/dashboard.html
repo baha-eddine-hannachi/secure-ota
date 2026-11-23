@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Supervision OTA</title>
+  <link rel="stylesheet" href="/dashboard/dashboard.css">
+  <script src="/dashboard/dashboard.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div><p class="eyebrow">IoT · supervision sécurisée</p><h1>Tableau de bord OTA</h1></div>
+    <div class="session-box">
+      <form id="login-form" autocomplete="off">
+        <label for="admin-token">Jeton administrateur</label>
+        <div class="token-row"><input id="admin-token" type="password" autocomplete="new-password" spellcheck="false" required aria-describedby="token-help"><button type="submit">Ouvrir la session</button></div>
+        <small id="token-help">Le jeton reste en mémoire jusqu’au rechargement ou à la déconnexion.</small>
+      </form>
+      <button id="logout" class="secondary" type="button" hidden>Déconnexion</button>
+    </div>
+  </header>
+  <main>
+    <p id="notice" class="notice" role="status" aria-live="polite">Saisissez votre jeton pour charger les données protégées.</p>
+    <div id="dashboard-app" hidden>
+      <nav class="tabs" role="tablist" aria-label="Sections du tableau de bord">
+        <button role="tab" aria-selected="true" aria-controls="view-overview" id="tab-overview" data-view="overview">Vue d’ensemble</button>
+        <button role="tab" aria-selected="false" aria-controls="view-updates" id="tab-updates" data-view="updates" tabindex="-1">Mises à jour</button>
+        <button role="tab" aria-selected="false" aria-controls="view-firmwares" id="tab-firmwares" data-view="firmwares" tabindex="-1">Firmwares</button>
+        <button role="tab" aria-selected="false" aria-controls="view-security" id="tab-security" data-view="security" tabindex="-1">Sécurité</button>
+        <button role="tab" aria-selected="false" aria-controls="view-tests" id="tab-tests" data-view="tests" tabindex="-1">Tests</button>
+        <button role="tab" aria-selected="false" aria-controls="view-report" id="tab-report" data-view="report" tabindex="-1">Rapport</button>
+      </nav>
+      <section id="view-overview" role="tabpanel" aria-labelledby="tab-overview" class="view">
+        <div id="overview-cards" class="card-grid"></div>
+        <section class="panel"><h2>Mise à jour active</h2><div id="active-update"></div></section>
+      </section>
+      <section id="view-updates" role="tabpanel" aria-labelledby="tab-updates" class="view" hidden>
+        <section class="panel"><h2>Dernières mises à jour</h2><div class="table-wrap"><table><thead><tr><th>Créée</th><th>Appareil</th><th>Version</th><th>État</th><th>Durée</th><th>Erreur</th><th>Détail</th></tr></thead><tbody id="updates-body"></tbody></table></div><div id="update-detail" class="detail"></div></section>
+      </section>
+      <section id="view-firmwares" role="tabpanel" aria-labelledby="tab-firmwares" class="view" hidden>
+        <section class="panel"><div class="panel-heading"><h2>Versions enregistrées</h2><button id="scan-releases" type="button">Rechercher de nouvelles versions</button></div><p id="scan-results" role="status" aria-live="polite"></p><div class="table-wrap"><table><thead><tr><th>Cible</th><th>Version</th><th>Taille</th><th>SHA-256</th><th>Signature</th><th>Statut</th><th>Enregistré</th><th>Action</th></tr></thead><tbody id="firmwares-body"></tbody></table></div></section>
+      </section>
+      <section id="view-security" role="tabpanel" aria-labelledby="tab-security" class="view" hidden>
+        <section class="panel"><div class="panel-heading"><h2>Événements de sécurité</h2><label for="severity-filter">Gravité<select id="severity-filter"><option value="">Toutes</option><option value="high">Haute</option><option value="error">Erreur</option><option value="warning">Avertissement</option><option value="info">Information</option></select></label></div><div id="security-list" class="event-list"></div></section>
+      </section>
+      <section id="view-tests" role="tabpanel" aria-labelledby="tab-tests" class="view" hidden>
+        <section class="panel"><h2>Campagne T01–T14</h2><p id="test-counts"></p><progress id="test-progress" max="14" value="0" aria-label="Nombre de tests réussis sur 14"></progress><div class="table-wrap"><table><thead><tr><th>ID</th><th>Test</th><th>Étape</th><th>Statut</th><th>Date</th></tr></thead><tbody id="tests-body"></tbody></table></div><div id="test-detail" class="detail"></div></section>
+      </section>
+      <section id="view-report" role="tabpanel" aria-labelledby="tab-report" class="view" hidden>
+        <section class="panel report-panel"><h2>Rapport de campagne</h2><p>Ouvrir la version imprimable du rapport généré. Elle peut être enregistrée au format PDF depuis le navigateur.</p><button id="open-report" type="button">Ouvrir le rapport imprimable</button><p class="muted">Le rapport et les preuves reflètent uniquement les résultats enregistrés.</p></section>
+      </section>
+      <footer><span id="refresh-time">Actualisation en attente.</span><button id="refresh-now" class="secondary" type="button">Actualiser</button></footer>
+    </div>
+    <dialog id="deploy-dialog" aria-labelledby="deploy-title"><form method="dialog"><h2 id="deploy-title">Confirmer le déploiement</h2><div id="deploy-summary"></div><p>La carte va redémarrer pendant l’installation OTA.</p><div class="token-row"><button value="cancel" class="secondary">Annuler</button><button id="confirm-deploy" type="button">Déployer</button></div></form></dialog>
+  </main>
+</body>
+</html>

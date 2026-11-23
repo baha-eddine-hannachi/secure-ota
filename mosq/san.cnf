@@ -1,0 +1,4 @@
+subjectAltName=IP:10.210.189.35,IP:192.168.0.217,DNS:localhost,IP:127.0.0.1
+extendedKeyUsage=serverAuth
+basicConstraints=critical,CA:FALSE
+keyUsage=critical,digitalSignature,keyEncipherment

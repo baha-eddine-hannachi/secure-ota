@@ -1,0 +1,11 @@
+user backend
+topic write iot/stm32/update/command
+topic read iot/#
+
+user esp32-001
+topic read iot/stm32/update/command
+topic write iot/stm32/status
+topic write iot/stm32/telemetry
+topic write iot/stm32/update/status
+topic write iot/stm32/security/events
+topic write iot/esp32/status

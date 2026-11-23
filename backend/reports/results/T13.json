@@ -1,0 +1,19 @@
+{
+  "id": "T13",
+  "title": "Sécurité du backend et API",
+  "stage": "backend",
+  "status": "PASS",
+  "fw_from": "",
+  "fw_to": "",
+  "date": "2026-11-18T11:14:00.730Z",
+  "operator": "Codex",
+  "summary": "Backend suite: 31/31 passed; dependency audit: 0 vulnerabilities; isolated QA: 33 assertions passed; ESP-IDF firmware build completed. Live TLS negotiation, MQTT with a test account, and targeted live rate-limit exercise were not run.",
+  "observed": [
+    "npm test: 31 passed, 0 failed",
+    "npm audit: 0 vulnerabilities",
+    "node qa/isolated_qa.mjs: 33 isolated assertions completed; C5/C6/C7/E1 passed",
+    "idf.py build: completed; wifi_base.bin 0xec5e0 bytes, 51% partition space free"
+  ],
+  "evidence": [],
+  "notes": "PASS applies to the software checks listed. Live TLS negotiation, live MQTT, and targeted rate-limit checks remain unrun. No real device or external listener was contacted."
+}

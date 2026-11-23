@@ -1,0 +1,12 @@
+{"manifest":{
+  "device_type": "esp32",
+  "version": "1.2.0",
+  "min_version": "0.0.0",
+  "size": 970976,
+  "sha256": "874022347983ebcfe221617c0779dd1b0cc01d8b040a5ebaaabeab4b50f4c231",
+  "signature": "My0qYbs9fXH+OG6MFctjylWvw1OO3pSQurn9QKjfZSCFW9LDAEFOiTjTX4STOkYsLrwiMBP4cy73NJRw0koZXw==",
+  "signature_alg": "ECDSA-P256-SHA256-P1363",
+  "encrypted": false,
+  "url": "https://10.210.189.35:8443/firmware/esp32/1.2.0/firmware.bin",
+  "issued_at": "2026-11-11T18:51:36.534Z"
+},"firmware_path":"C:\\Users\\Dell\\Documents\\iot\\release\\1.2.0\\firmware.bin"}

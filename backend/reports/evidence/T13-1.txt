@@ -1,0 +1,34 @@
+A2	PASS	isolated GET /api/health returns status and MQTT state only
+[REDACTED SENSITIVE LINE]
+[REDACTED SENSITIVE LINE]
+A1-malformed header	PASS	401 generic JSON; no data returned
+[REDACTED SENSITIVE LINE]
+[REDACTED SENSITIVE LINE]
+[REDACTED SENSITIVE LINE]
+A4	PASS	Helmet headers present; X-Powered-By absent; no wildcard CORS
+B2-invalid-json	PASS	400 structured error; no stack
+B2-oversize	PASS	body over 32 KB receives 413
+B1-extra-field	PASS	strict update body rejects extra field
+B3	PASS	malformed and injection-shaped update IDs return 404, not 500
+C1	PASS	temporary-key-signed manifest accepted; stored file hash matches
+E1-1.0.0	PASS	device at 1.0.0 rejected request for 1.0.0 with VERSION_NOT_NEWER
+E1-0.9.0	PASS	device at 1.0.0 rejected request for 0.9.0 with VERSION_NOT_NEWER
+E1-newer	PASS	newer version accepted
+C7-min-greater	PASS	registration rejects min_version above version with INVALID_MANIFEST
+C7-equal	PASS	equal min_version and version accepted
+C6-same-digest	PASS	same digest registration is idempotent
+C6-different-digest	PASS	replacement rejected and stored bytes unchanged
+C5-path-attacks	PASS	outside, UNC, device names, NUL, directory, and junction escape rejected
+C5-valid-path	PASS	regular file within allowed source folder accepted
+D1-single-range	PASS	exact binary hash and 206 range verified in isolated server
+D1-multirange	PASS	multi-range rejected with 416
+D1-manifest-range	PASS	manifest is intentionally full-response; documentation limits Range support to firmware.bin
+[REDACTED SENSITIVE LINE]
+D2	PASS	directory listing denied; normalized traversal path returns 404
+G1	PASS	1 of 10 concurrent same-device POST-equivalent requests accepted
+E4-command-fields	PASS	published command has required fields; publisher implementation specifies QoS 1 and retain false
+E3	PASS	stale sent request lazily expires after TTL plus two-minute grace
+E2-expiry-retry	PASS	new request accepted after expiry
+E3-install-grace	PASS	installing update stays active until five-minute post-expiry grace elapses
+F1-schema	PASS	all nine allowed states and invalid state/fractional progress validated
+TOTAL	33	isolated QA assertions completed

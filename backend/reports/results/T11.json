@@ -1,0 +1,14 @@
+{
+  "id": "T11",
+  "title": "Coupure d’alimentation pendant OTA et après redémarrage",
+  "stage": "1/2",
+  "status": "NOT_RUN",
+  "fw_from": "",
+  "fw_to": "",
+  "date": "2026-11-11T19:24:14.280Z",
+  "operator": "Not run",
+  "summary": "Test non exécuté; procédure prévue uniquement.",
+  "observed": [],
+  "evidence": [],
+  "notes": "NOT_RUN: aucun résultat n’a été inventé. La date correspond à la création de l’enregistrement."
+}

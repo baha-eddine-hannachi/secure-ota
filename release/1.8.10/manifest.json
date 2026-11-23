@@ -1,0 +1,12 @@
+{
+  "device_type": "esp32",
+  "version": "1.8.10",
+  "min_version": "1.7.0",
+  "size": 976784,
+  "sha256": "266beea97e41a7dcf237e9324e817da92514d8f54e4b42c6e91cf881ed93cfca",
+  "signature": "mzQsLfBeRSoHsgMEKRfNXjH1gZAg27fnuSeUqUMtQ90PtvPysY/499SdxDWiKIotoFWmwTl4Gl3T50oqf/Otxw==",
+  "signature_alg": "ECDSA-P256-SHA256-P1363",
+  "encrypted": false,
+  "url": "https://10.210.189.35:8443/firmware/esp32/1.8.10/firmware.bin",
+  "issued_at": "2026-11-22T22:26:45.692Z"
+}

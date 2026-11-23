@@ -1,0 +1,26 @@
+{
+  "name": "secure-iot-update-backend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Secure IoT update orchestration and device supervision backend",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "node --test",
+    "release": "node scripts/release.js",
+    "deploy": "node scripts/deploy.js",
+    "status": "node scripts/status.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0",
+    "helmet": "^8.0.0",
+    "mqtt": "^5.10.4",
+    "pino": "^9.6.0",
+    "zod": "^4.6.7"
+  }
+}

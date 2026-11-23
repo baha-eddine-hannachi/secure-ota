@@ -1,0 +1,936 @@
+Command: L:\Espressif\tools\python\v6.1\venv\Scripts\python.exe L:\esp\v6.1\esp-idf\tools/idf_monitor.py -p COM9 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\Users\Dell\Documents\iot\wifi_base\build\wifi_base.elf C:\Users\Dell\Documents\iot\wifi_base\build\bootloader\bootloader.elf --force-color -m 'L:\Espressif\tools\python\v6.1\venv\Scripts\python.exe' 'L:\esp\v6.1\esp-idf\tools\idf.py' '-p' 'COM9'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15896
+load:0x40080400,len:3988
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.1 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Nov 22 2026 23:50:43[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (31) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00011000 00006000[0m
+[0;32mI (62) boot:  1 otadata          OTA data         01 00 00017000 00002000[0m
+[0;32mI (69) boot:  2 phy_init         RF data          01 01 00019000 00001000[0m
+[0;32mI (75) boot:  3 ota_0            OTA app          00 10 00020000 001e0000[0m
+[0;32mI (82) boot:  4 ota_1            OTA app          00 11 00200000 001e0000[0m
+[0;32mI (88) boot: End of partition table[0m
+[0;32mI (92) esp_image: segment 0: paddr=00020020 vaddr=3f400020 size=23c80h (146560) map[0m
+[0;32mI (151) esp_image: segment 1: paddr=00043ca8 vaddr=3ffb0000 size=04678h ( 18040) load[0m
+[0;32mI (159) esp_image: segment 2: paddr=00048328 vaddr=40080000 size=07cf0h ( 31984) load[0m
+[0;32mI (172) esp_image: segment 3: paddr=00050020 vaddr=400d0020 size=b0d1ch (724252) map[0m
+[0;32mI (430) esp_image: segment 4: paddr=00100d44 vaddr=40087cf0 size=0d9f8h ( 55800) load[0m
+[0;32mI (453) esp_image: segment 5: paddr=0010e744 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (464) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (464) boot: Disabling RNG early entropy source...[0m
+[0;32mI (475) cpu_start: Multicore app[0m
+[0;32mI (483) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (484) cpu_start: Pro cpu start user code[0m
+[0;32mI (484) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (485) app_init: Application information:[0m
+[0;32mI (489) app_init: Project name:     wifi_base[0m
+[0;32mI (493) app_init: App version:      1.8.12[0m
+[0;32mI (497) app_init: Compile time:     Nov 22 2026 23:50:07[0m
+[0;32mI (502) app_init: ELF file SHA256:  92a9720bb...[0m
+[0;32mI (506) app_init: ESP-IDF:          v6.1[0m
+[0;32mI (510) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (514) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (518) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (522) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (528) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (533) heap_init: At 3FFBA520 len 00025AE0 (150 KiB): DRAM[0m
+[0;32mI (538) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (544) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (549) heap_init: At 400956E8 len 0000A918 (42 KiB): IRAM[0m
+[0;32mI (556) spi_flash: detected chip: generic[0m
+[0;32mI (558) spi_flash: flash io: dio[0m
+[0;32mI (563) main_task: Started on CPU0[0m
+[0;32mI (563) main_task: Calling app_main()[0m
+[0;32mI (593) iot: Application wifi_base version 1.8.12[0m
+[0;32mI (593) iot: Demo RGB LED: red[0m
+[0;32mI (603) main_task: Returned from app_main()[0m
+[0;32mI (613) wifi:wifi driver task: 3ffc3994, prio:23, stack:6656, core=0[0m
+[0;32mI (623) wifi:wifi firmware version: e12a754[0m
+[0;32mI (623) wifi:wifi certification version: v7.0[0m
+[0;32mI (623) wifi:config NVS flash: enabled[0m
+[0;32mI (623) wifi:config nano formatting: disabled[0m
+[0;32mI (633) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (633) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (633) wifi:Init management short buffer num: 32[0m
+[0;32mI (643) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (643) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (653) wifi:Init static rx buffer num: 10[0m
+[0;32mI (653) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (663) wifi_init: rx ba win: 6[0m
+[0;32mI (663) wifi_init: accept mbox: 6[0m
+[0;32mI (663) wifi_init: tcpip mbox: 32[0m
+[0;32mI (663) wifi_init: udp mbox: 6[0m
+[0;32mI (673) wifi_init: tcp mbox: 6[0m
+[0;32mI (673) wifi_init: tcp tx win: 5760[0m
+[0;32mI (673) wifi_init: tcp rx win: 5760[0m
+[0;32mI (683) wifi_init: tcp mss: 1440[0m
+[0;32mI (683) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (683) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (693) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (773) wifi:mode : sta (14:33:5c:38:21:08)[0m
+[0;32mI (773) wifi:enable tsf[0m
+[0;32mI (773) wifi:Set ps type: 0, coexist: 0[0m
+
+[0;32mI (833) wifi:new:<12,0>, old:<1,0>, ap:<255,255>, sta:<12,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (833) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (873) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (883) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (903) wifi:connected with wifi, aid = 7, channel 12, BW20, bssid = 82:7b:91:f8:71:fc[0m
+[0;32mI (913) wifi:security: WPA2-PSK, phy: bgn, rssi: -67, cipher(pairwise:0x3, group:0x3), pmf:0[0m
+[0;32mI (913) wifi:pm start, type: 0[0m
+
+[0;32mI (913) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (933) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (933) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (1973) esp_netif_handlers: sta ip: 10.210.189.4, mask: 255.255.255.0, gw: 10.210.189.38[0m
+[0;32mI (1973) iot: Connecte, IP: 10.210.189.4[0m
+[0;32mI (1973) iot: SNTP: ESP_OK[0m
+[0;32mI (2033) wifi:<ba-add>idx:0 (ifx:0, 82:7b:91:f8:71:fc), tid:0, ssn:3, winSize:64[0m
+[0;32mI (2783) iot: MQTT connecte (TLS ok, broker authentifie)[0m
+[0;32mI (2993) iot: Statut publie (msg_id=34839)[0m
+[0;32mI (32993) iot: Statut publie (msg_id=6128)[0m
+[0;32mI (62993) iot: Statut publie (msg_id=53243)[0m
+[0;32mI (92993) iot: Statut publie (msg_id=33462)[0m
+[0;32mI (122993) iot: Statut publie (msg_id=53386)[0m
+[0;32mI (152993) iot: Statut publie (msg_id=13350)[0m
+[0;32mI (182993) iot: Statut publie (msg_id=49910)[0m
+[0;32mI (212993) iot: Statut publie (msg_id=41539)[0m
+[0;32mI (242993) iot: Statut publie (msg_id=34590)[0m
+[0;32mI (248033) iot: Etat mise a jour: received (0%)[0m
+[0;32mI (248043) iot: Etat mise a jour: downloading (0%)[0m
+[0;32mI (251343) iot: Etat mise a jour: downloading (0%)[0m
+[0;32mI (251363) iot: Etat mise a jour: downloading (0%)[0m
+[0;32mI (251383) iot: Etat mise a jour: downloading (1%)[0m
+[0;32mI (251453) iot: Etat mise a jour: downloading (1%)[0m
+[0;32mI (251473) iot: Etat mise a jour: downloading (2%)[0m
+[0;32mI (251493) iot: Etat mise a jour: downloading (2%)[0m
+[0;32mI (251513) iot: Etat mise a jour: downloading (2%)[0m
+[0;32mI (251623) iot: Etat mise a jour: downloading (3%)[0m
+[0;32mI (251633) iot: Etat mise a jour: downloading (3%)[0m
+[0;32mI (251663) iot: Etat mise a jour: downloading (4%)[0m
+[0;32mI (251683) iot: Etat mise a jour: downloading (4%)[0m
+[0;32mI (251783) iot: Etat mise a jour: downloading (5%)[0m
+[0;32mI (251803) iot: Etat mise a jour: downloading (5%)[0m
+[0;32mI (251813) iot: Etat mise a jour: downloading (5%)[0m
+[0;32mI (251833) iot: Etat mise a jour: downloading (6%)[0m
+[0;32mI (251853) iot: Etat mise a jour: downloading (6%)[0m
+[0;32mI (251913) iot: Etat mise a jour: downloading (7%)[0m
+[0;32mI (251933) iot: Etat mise a jour: downloading (7%)[0m
+[0;32mI (251953) iot: Etat mise a jour: downloading (7%)[0m
+[0;32mI (251973) iot: Etat mise a jour: downloading (8%)[0m
+[0;32mI (252073) iot: Etat mise a jour: downloading (8%)[0m
+[0;32mI (252093) iot: Etat mise a jour: downloading (9%)[0m
+[0;32mI (252103) iot: Etat mise a jour: downloading (9%)[0m
+[0;32mI (252133) iot: Etat mise a jour: downloading (10%)[0m
+[0;32mI (252183) iot: Etat mise a jour: downloading (10%)[0m
+[0;32mI (252193) iot: Etat mise a jour: downloading (10%)[0m
+[0;32mI (252223) iot: Etat mise a jour: downloading (11%)[0m
+[0;32mI (252233) iot: Etat mise a jour: downloading (11%)[0m
+[0;32mI (252333) iot: Etat mise a jour: downloading (12%)[0m
+[0;32mI (252353) iot: Etat mise a jour: downloading (12%)[0m
+[0;32mI (252363) iot: Etat mise a jour: downloading (12%)[0m
+[0;32mI (252373) iot: Etat mise a jour: downloading (13%)[0m
+[0;32mI (252433) iot: Etat mise a jour: downloading (13%)[0m
+[0;32mI (252453) iot: Etat mise a jour: downloading (14%)[0m
+[0;32mI (252473) iot: Etat mise a jour: downloading (14%)[0m
+[0;32mI (252493) iot: Etat mise a jour: downloading (15%)[0m
+[0;32mI (252603) iot: Etat mise a jour: downloading (15%)[0m
+[0;32mI (252613) iot: Etat mise a jour: downloading (15%)[0m
+[0;32mI (252633) iot: Etat mise a jour: downloading (16%)[0m
+[0;32mI (252653) iot: Etat mise a jour: downloading (16%)[0m
+[0;32mI (252703) iot: Etat mise a jour: downloading (17%)[0m
+[0;32mI (252723) iot: Etat mise a jour: downloading (17%)[0m
+[0;32mI (252743) iot: Etat mise a jour: downloading (18%)[0m
+[0;32mI (252763) iot: Etat mise a jour: downloading (18%)[0m
+[0;32mI (252873) iot: Etat mise a jour: downloading (18%)[0m
+[0;32mI (252893) iot: Etat mise a jour: downloading (19%)[0m
+[0;32mI (252913) iot: Etat mise a jour: downloading (19%)[0m
+[0;32mI (252933) iot: Etat mise a jour: downloading (20%)[0m
+[0;32mI (252993) iot: Etat mise a jour: downloading (20%)[0m
+[0;32mI (253003) iot: Etat mise a jour: downloading (20%)[0m
+[0;32mI (253033) iot: Etat mise a jour: downloading (21%)[0m
+[0;32mI (253053) iot: Etat mise a jour: downloading (21%)[0m
+[0;32mI (253153) iot: Etat mise a jour: downloading (22%)[0m
+[0;32mI (253163) iot: Etat mise a jour: downloading (22%)[0m
+[0;32mI (253193) iot: Etat mise a jour: downloading (23%)[0m
+[0;32mI (253213) iot: Etat mise a jour: downloading (23%)[0m
+[0;32mI (253263) iot: Etat mise a jour: downloading (23%)[0m
+[0;32mI (253273) iot: Etat mise a jour: downloading (24%)[0m
+[0;32mI (253303) iot: Etat mise a jour: downloading (24%)[0m
+[0;32mI (253333) iot: Etat mise a jour: downloading (25%)[0m
+[0;32mI (253423) iot: Etat mise a jour: downloading (25%)[0m
+[0;32mI (253443) iot: Etat mise a jour: downloading (25%)[0m
+[0;32mI (253463) iot: Etat mise a jour: downloading (26%)[0m
+[0;32mI (253493) iot: Etat mise a jour: downloading (26%)[0m
+[0;32mI (253593) iot: Etat mise a jour: downloading (27%)[0m
+[0;32mI (253613) iot: Etat mise a jour: downloading (27%)[0m
+[0;32mI (253633) iot: Etat mise a jour: downloading (28%)[0m
+[0;32mI (253653) iot: Etat mise a jour: downloading (28%)[0m
+[0;32mI (253713) iot: Etat mise a jour: downloading (28%)[0m
+[0;32mI (253733) iot: Etat mise a jour: downloading (29%)[0m
+[0;32mI (253753) iot: Etat mise a jour: downloading (29%)[0m
+[0;32mI (253773) iot: Etat mise a jour: downloading (30%)[0m
+[0;32mI (253873) iot: Etat mise a jour: downloading (30%)[0m
+[0;32mI (253883) iot: Etat mise a jour: downloading (31%)[0m
+[0;32mI (253903) iot: Etat mise a jour: downloading (31%)[0m
+[0;32mI (253923) iot: Etat mise a jour: downloading (31%)[0m
+[0;32mI (253973) iot: Etat mise a jour: downloading (32%)[0m
+[0;32mI (253983) iot: Etat mise a jour: downloading (32%)[0m
+[0;32mI (254013) iot: Etat mise a jour: downloading (33%)[0m
+[0;32mI (254043) iot: Etat mise a jour: downloading (33%)[0m
+[0;32mI (254143) iot: Etat mise a jour: downloading (33%)[0m
+[0;32mI (254153) iot: Etat mise a jour: downloading (34%)[0m
+[0;32mI (254183) iot: Etat mise a jour: downloading (34%)[0m
+[0;32mI (254203) iot: Etat mise a jour: downloading (35%)[0m
+[0;32mI (254253) iot: Etat mise a jour: downloading (35%)[0m
+[0;32mI (254273) iot: Etat mise a jour: downloading (36%)[0m
+[0;32mI (254293) iot: Etat mise a jour: downloading (36%)[0m
+[0;32mI (254323) iot: Etat mise a jour: downloading (36%)[0m
+[0;32mI (254413) iot: Etat mise a jour: downloading (37%)[0m
+[0;32mI (254423) iot: Etat mise a jour: downloading (37%)[0m
+[0;32mI (254443) iot: Etat mise a jour: downloading (38%)[0m
+[0;32mI (254453) iot: Etat mise a jour: downloading (38%)[0m
+[0;32mI (254533) iot: Etat mise a jour: downloading (38%)[0m
+[0;32mI (254553) iot: Etat mise a jour: downloading (39%)[0m
+[0;32mI (254563) iot: Etat mise a jour: downloading (39%)[0m
+[0;32mI (254593) iot: Etat mise a jour: downloading (40%)[0m
+[0;32mI (254673) iot: Etat mise a jour: downloading (40%)[0m
+[0;32mI (254693) iot: Etat mise a jour: downloading (41%)[0m
+[0;32mI (254703) iot: Etat mise a jour: downloading (41%)[0m
+[0;32mI (254733) iot: Etat mise a jour: downloading (41%)[0m
+[0;32mI (254793) iot: Etat mise a jour: downloading (42%)[0m
+[0;32mI (254803) iot: Etat mise a jour: downloading (42%)[0m
+[0;32mI (254843) iot: Etat mise a jour: downloading (43%)[0m
+[0;32mI (254863) iot: Etat mise a jour: downloading (43%)[0m
+[0;32mI (254953) iot: Etat mise a jour: downloading (44%)[0m
+[0;32mI (254973) iot: Etat mise a jour: downloading (44%)[0m
+[0;32mI (254993) iot: Etat mise a jour: downloading (44%)[0m
+[0;32mI (255013) iot: Etat mise a jour: downloading (45%)[0m
+[0;32mI (255063) iot: Etat mise a jour: downloading (45%)[0m
+[0;32mI (255083) iot: Etat mise a jour: downloading (46%)[0m
+[0;32mI (255103) iot: Etat mise a jour: downloading (46%)[0m
+[0;32mI (255123) iot: Etat mise a jour: downloading (46%)[0m
+[0;32mI (255213) iot: Etat mise a jour: downloading (47%)[0m
+[0;32mI (255233) iot: Etat mise a jour: downloading (47%)[0m
+[0;32mI (255243) iot: Etat mise a jour: downloading (48%)[0m
+[0;32mI (255263) iot: Etat mise a jour: downloading (48%)[0m
+[0;32mI (255333) iot: Etat mise a jour: downloading (49%)[0m
+[0;32mI (255343) iot: Etat mise a jour: downloading (49%)[0m
+[0;32mI (255373) iot: Etat mise a jour: downloading (49%)[0m
+[0;32mI (255383) iot: Etat mise a jour: downloading (50%)[0m
+[0;32mI (255483) iot: Etat mise a jour: downloading (50%)[0m
+[0;32mI (255493) iot: Etat mise a jour: downloading (51%)[0m
+[0;32mI (255523) iot: Etat mise a jour: downloading (51%)[0m
+[0;32mI (255533) iot: Etat mise a jour: downloading (51%)[0m
+[0;32mI (255593) iot: Etat mise a jour: downloading (52%)[0m
+[0;32mI (255613) iot: Etat mise a jour: downloading (52%)[0m
+[0;32mI (255623) iot: Etat mise a jour: downloading (53%)[0m
+[0;32mI (255643) iot: Etat mise a jour: downloading (53%)[0m
+[0;32mI (255703) iot: Etat mise a jour: downloading (54%)[0m
+[0;32mI (255713) iot: Etat mise a jour: downloading (54%)[0m
+[0;32mI (255743) iot: Etat mise a jour: downloading (54%)[0m
+[0;32mI (255773) iot: Etat mise a jour: downloading (55%)[0m
+[0;32mI (255863) iot: Etat mise a jour: downloading (55%)[0m
+[0;32mI (255873) iot: Etat mise a jour: downloading (56%)[0m
+[0;32mI (255893) iot: Etat mise a jour: downloading (56%)[0m
+[0;32mI (255913) iot: Etat mise a jour: downloading (57%)[0m
+[0;32mI (255973) iot: Etat mise a jour: downloading (57%)[0m
+[0;32mI (255993) iot: Etat mise a jour: downloading (57%)[0m
+[0;32mI (256013) iot: Etat mise a jour: downloading (58%)[0m
+[0;32mI (256033) iot: Etat mise a jour: downloading (58%)[0m
+[0;32mI (256123) iot: Etat mise a jour: downloading (59%)[0m
+[0;32mI (256143) iot: Etat mise a jour: downloading (59%)[0m
+[0;32mI (256153) iot: Etat mise a jour: downloading (59%)[0m
+[0;32mI (256173) iot: Etat mise a jour: downloading (60%)[0m
+[0;32mI (256233) iot: Etat mise a jour: downloading (60%)[0m
+[0;32mI (256253) iot: Etat mise a jour: downloading (61%)[0m
+[0;32mI (256273) iot: Etat mise a jour: downloading (61%)[0m
+[0;32mI (256303) iot: Etat mise a jour: downloading (62%)[0m
+[0;32mI (256393) iot: Etat mise a jour: downloading (62%)[0m
+[0;32mI (256403) iot: Etat mise a jour: downloading (62%)[0m
+[0;32mI (256423) iot: Etat mise a jour: downloading (63%)[0m
+[0;32mI (256443) iot: Etat mise a jour: downloading (63%)[0m
+[0;32mI (256493) iot: Etat mise a jour: downloading (64%)[0m
+[0;32mI (256513) iot: Etat mise a jour: downloading (64%)[0m
+[0;32mI (256543) iot: Etat mise a jour: downloading (64%)[0m
+[0;32mI (256563) iot: Etat mise a jour: downloading (65%)[0m
+[0;32mI (256663) iot: Etat mise a jour: downloading (65%)[0m
+[0;32mI (256683) iot: Etat mise a jour: downloading (66%)[0m
+[0;32mI (256703) iot: Etat mise a jour: downloading (66%)[0m
+[0;32mI (256733) iot: Etat mise a jour: downloading (67%)[0m
+[0;32mI (256833) iot: Etat mise a jour: downloading (67%)[0m
+[0;32mI (256853) iot: Etat mise a jour: downloading (67%)[0m
+[0;32mI (256873) iot: Etat mise a jour: downloading (68%)[0m
+[0;32mI (256883) iot: Etat mise a jour: downloading (68%)[0m
+[0;32mI (256943) iot: Etat mise a jour: downloading (69%)[0m
+[0;32mI (256953) iot: Etat mise a jour: downloading (69%)[0m
+[0;32mI (256973) iot: Etat mise a jour: downloading (70%)[0m
+[0;32mI (256993) iot: Etat mise a jour: downloading (70%)[0m
+[0;32mI (257103) iot: Etat mise a jour: downloading (70%)[0m
+[0;32mI (257123) iot: Etat mise a jour: downloading (71%)[0m
+[0;32mI (257133) iot: Etat mise a jour: downloading (71%)[0m
+[0;32mI (257153) iot: Etat mise a jour: downloading (72%)[0m
+[0;32mI (257213) iot: Etat mise a jour: downloading (72%)[0m
+[0;32mI (257233) iot: Etat mise a jour: downloading (72%)[0m
+[0;32mI (257253) iot: Etat mise a jour: downloading (73%)[0m
+[0;32mI (257283) iot: Etat mise a jour: downloading (73%)[0m
+[0;32mI (257383) iot: Etat mise a jour: downloading (74%)[0m
+[0;32mI (257393) iot: Etat mise a jour: downloading (74%)[0m
+[0;32mI (257413) iot: Etat mise a jour: downloading (75%)[0m
+[0;32mI (257433) iot: Etat mise a jour: downloading (75%)[0m
+[0;32mI (257543) iot: Etat mise a jour: downloading (75%)[0m
+[0;32mI (257563) iot: Etat mise a jour: downloading (76%)[0m
+[0;32mI (257573) iot: Etat mise a jour: downloading (76%)[0m
+[0;32mI (257593) iot: Etat mise a jour: downloading (77%)[0m
+[0;32mI (257653) iot: Etat mise a jour: downloading (77%)[0m
+[0;32mI (257663) iot: Etat mise a jour: downloading (77%)[0m
+[0;32mI (257683) iot: Etat mise a jour: downloading (78%)[0m
+[0;32mI (257703) iot: Etat mise a jour: downloading (78%)[0m
+[0;32mI (257763) iot: Etat mise a jour: downloading (79%)[0m
+[0;32mI (257773) iot: Etat mise a jour: downloading (79%)[0m
+[0;32mI (257793) iot: Etat mise a jour: downloading (80%)[0m
+[0;32mI (257813) iot: Etat mise a jour: downloading (80%)[0m
+[0;32mI (257913) iot: Etat mise a jour: downloading (80%)[0m
+[0;32mI (257923) iot: Etat mise a jour: downloading (81%)[0m
+[0;32mI (257943) iot: Etat mise a jour: downloading (81%)[0m
+[0;32mI (257963) iot: Etat mise a jour: downloading (82%)[0m
+[0;32mI (258023) iot: Etat mise a jour: downloading (82%)[0m
+[0;32mI (258033) iot: Etat mise a jour: downloading (83%)[0m
+[0;32mI (258053) iot: Etat mise a jour: downloading (83%)[0m
+[0;32mI (258073) iot: Etat mise a jour: downloading (83%)[0m
+[0;32mI (258133) iot: Etat mise a jour: downloading (84%)[0m
+[0;32mI (258153) iot: Etat mise a jour: downloading (84%)[0m
+[0;32mI (258173) iot: Etat mise a jour: downloading (85%)[0m
+[0;32mI (258203) iot: Etat mise a jour: downloading (85%)[0m
+[0;32mI (258283) iot: Etat mise a jour: downloading (85%)[0m
+[0;32mI (258293) iot: Etat mise a jour: downloading (86%)[0m
+[0;32mI (258313) iot: Etat mise a jour: downloading (86%)[0m
+[0;32mI (258333) iot: Etat mise a jour: downloading (87%)[0m
+[0;32mI (258403) iot: Etat mise a jour: downloading (87%)[0m
+[0;32mI (258423) iot: Etat mise a jour: downloading (88%)[0m
+[0;32mI (258443) iot: Etat mise a jour: downloading (88%)[0m
+[0;32mI (258463) iot: Etat mise a jour: downloading (88%)[0m
+[0;32mI (258553) iot: Etat mise a jour: downloading (89%)[0m
+[0;32mI (258563) iot: Etat mise a jour: downloading (89%)[0m
+[0;32mI (258583) iot: Etat mise a jour: downloading (90%)[0m
+[0;32mI (258603) iot: Etat mise a jour: downloading (90%)[0m
+[0;32mI (258653) iot: Etat mise a jour: downloading (90%)[0m
+[0;32mI (258673) iot: Etat mise a jour: downloading (91%)[0m
+[0;32mI (258693) iot: Etat mise a jour: downloading (91%)[0m
+[0;32mI (258713) iot: Etat mise a jour: downloading (92%)[0m
+[0;32mI (258813) iot: Etat mise a jour: downloading (92%)[0m
+[0;32mI (258833) iot: Etat mise a jour: downloading (93%)[0m
+[0;32mI (258853) iot: Etat mise a jour: downloading (93%)[0m
+[0;32mI (258873) iot: Etat mise a jour: downloading (93%)[0m
+[0;32mI (258943) iot: Etat mise a jour: downloading (94%)[0m
+[0;32mI (258963) iot: Etat mise a jour: downloading (94%)[0m
+[0;32mI (258993) iot: Etat mise a jour: downloading (95%)[0m
+[0;32mI (259003) iot: Etat mise a jour: downloading (95%)[0m
+[0;32mI (259093) iot: Etat mise a jour: downloading (96%)[0m
+[0;32mI (259103) iot: Etat mise a jour: downloading (96%)[0m
+[0;32mI (259123) iot: Etat mise a jour: downloading (96%)[0m
+[0;32mI (259143) iot: Etat mise a jour: downloading (97%)[0m
+[0;32mI (259203) iot: Etat mise a jour: downloading (97%)[0m
+[0;32mI (259213) iot: Etat mise a jour: downloading (98%)[0m
+[0;32mI (259233) iot: Etat mise a jour: downloading (98%)[0m
+[0;32mI (259253) iot: Etat mise a jour: downloading (98%)[0m
+[0;32mI (259343) iot: Etat mise a jour: downloading (99%)[0m
+[0;32mI (259363) iot: Etat mise a jour: downloading (99%)[0m
+[0;32mI (259383) iot: Etat mise a jour: downloading (100%)[0m
+[0;32mI (259383) iot: Etat mise a jour: verifying (100%)[0m
+[0;32mI (259383) esp_image: segment 0: paddr=00200020 vaddr=3f400020 size=23c80h (146560) map[0m
+[0;32mI (259443) esp_image: segment 1: paddr=00223ca8 vaddr=3ffb0000 size=04678h ( 18040) [0m
+[0;32mI (259453) esp_image: segment 2: paddr=00228328 vaddr=40080000 size=07cf0h ( 31984) [0m
+[0;32mI (259463) esp_image: segment 3: paddr=00230020 vaddr=400d0020 size=b0d1ch (724252) map[0m
+[0;32mI (259703) esp_image: segment 4: paddr=002e0d44 vaddr=40087cf0 size=0d9f8h ( 55800) [0m
+[0;32mI (259723) esp_image: segment 5: paddr=002ee744 vaddr=50000000 size=00028h (    40) [0m
+[0;32mI (259733) iot: Etat mise a jour: installing (100%)[0m
+[0;32mI (259743) esp_image: segment 0: paddr=00200020 vaddr=3f400020 size=23c80h (146560) map[0m
+[0;32mI (259803) esp_image: segment 1: paddr=00223ca8 vaddr=3ffb0000 size=04678h ( 18040) [0m
+[0;32mI (259813) esp_image: segment 2: paddr=00228328 vaddr=40080000 size=07cf0h ( 31984) [0m
+[0;32mI (259823) esp_image: segment 3: paddr=00230020 vaddr=400d0020 size=b0d1ch (724252) map[0m
+[0;32mI (260063) esp_image: segment 4: paddr=002e0d44 vaddr=40087cf0 size=0d9f8h ( 55800) [0m
+[0;32mI (260083) esp_image: segment 5: paddr=002ee744 vaddr=50000000 size=00028h (    40) [0m
+[0;32mI (260103) iot: Etat mise a jour: rebooting (100%)[0m
+[0;32mI (261603) wifi:state: run -> init (0x0)[0m
+[0;32mI (261613) wifi:pm stop, total sleep time: 0 us / 260693076 us[0m
+
+[0;32mI (261613) wifi:<ba-del>idx:0, tid:0[0m
+[0;33mW (261613) iot: Wi-Fi perdu, raison=8, nouvelle tentative[0m
+[1;31mE (261623) esp-tls-mbedtls: read error :-0x004C[0m
+[1;31mE (261623) transport_base: esp_tls_conn_read error, errno=Software caused connection abort[0m
+[1;31mE (261623) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=113[0m
+[1;31mE (261633) iot: MQTT erreur (type 1)[0m
+[1;31mE (261633) mqtt_client: mqtt_process_receive: mqtt_message_receive() returned -2[0m
+[0;32mI (261643) wifi:flush txq[0m
+[0;33mW (261643) iot: MQTT deconnecte (reconnexion automatique)[0m
+[0;32mI (261643) wifi:stop sw txq[0m
+[0;32mI (261653) wifi:lmac stop hw txq[0m
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15896
+load:0x40080400,len:3988
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.1 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Nov 22 2026 23:50:43[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (31) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00011000 00006000[0m
+[0;32mI (62) boot:  1 otadata          OTA data         01 00 00017000 00002000[0m
+[0;32mI (69) boot:  2 phy_init         RF data          01 01 00019000 00001000[0m
+[0;32mI (75) boot:  3 ota_0            OTA app          00 10 00020000 001e0000[0m
+[0;32mI (82) boot:  4 ota_1            OTA app          00 11 00200000 001e0000[0m
+[0;32mI (88) boot: End of partition table[0m
+[0;32mI (99) esp_image: segment 0: paddr=00200020 vaddr=3f400020 size=23c80h (146560) map[0m
+[0;32mI (151) esp_image: segment 1: paddr=00223ca8 vaddr=3ffb0000 size=04678h ( 18040) load[0m
+[0;32mI (159) esp_image: segment 2: paddr=00228328 vaddr=40080000 size=07cf0h ( 31984) load[0m
+[0;32mI (172) esp_image: segment 3: paddr=00230020 vaddr=400d0020 size=b0d1ch (724252) map[0m
+[0;32mI (430) esp_image: segment 4: paddr=002e0d44 vaddr=40087cf0 size=0d9f8h ( 55800) load[0m
+[0;32mI (453) esp_image: segment 5: paddr=002ee744 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (464) boot: Loaded app from partition at offset 0x200000[0m
+[0;32mI (464) boot: Disabling RNG early entropy source...[0m
+[0;32mI (475) cpu_start: Multicore app[0m
+[0;32mI (483) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (483) cpu_start: Pro cpu start user code[0m
+[0;32mI (484) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (485) app_init: Application information:[0m
+[0;32mI (489) app_init: Project name:     wifi_base[0m
+[0;32mI (493) app_init: App version:      1.8.13[0m
+[0;32mI (497) app_init: Compile time:     Nov 22 2026 23:54:11[0m
+[0;32mI (502) app_init: ELF file SHA256:  0eb41c5ee...[0m
+[0;32mI (506) app_init: ESP-IDF:          v6.1[0m
+[0;32mI (510) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (514) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (518) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (522) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (528) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (533) heap_init: At 3FFBA520 len 00025AE0 (150 KiB): DRAM[0m
+[0;32mI (538) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (544) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (549) heap_init: At 400956E8 len 0000A918 (42 KiB): IRAM[0m
+[0;32mI (556) spi_flash: detected chip: generic[0m
+[0;32mI (558) spi_flash: flash io: dio[0m
+[0;32mI (563) main_task: Started on CPU0[0m
+[0;32mI (563) main_task: Calling app_main()[0m
+[0;32mI (593) iot: Application wifi_base version 1.8.13[0m
+[0;32mI (593) iot: Demo RGB LED: green[0m
+[0;33mW (603) iot: Nouvelle application a valider (health check 90 s)[0m
+[0;32mI (603) main_task: Returned from app_main()[0m
+[0;32mI (613) wifi:wifi driver task: 3ffc3994, prio:23, stack:6656, core=0[0m
+[0;32mI (623) wifi:wifi firmware version: e12a754[0m
+[0;32mI (623) wifi:wifi certification version: v7.0[0m
+[0;32mI (623) wifi:config NVS flash: enabled[0m
+[0;32mI (623) wifi:config nano formatting: disabled[0m
+[0;32mI (633) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (633) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (633) wifi:Init management short buffer num: 32[0m
+[0;32mI (643) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (643) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (653) wifi:Init static rx buffer num: 10[0m
+[0;32mI (653) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (663) wifi_init: rx ba win: 6[0m
+[0;32mI (663) wifi_init: accept mbox: 6[0m
+[0;32mI (663) wifi_init: tcpip mbox: 32[0m
+[0;32mI (663) wifi_init: udp mbox: 6[0m
+[0;32mI (673) wifi_init: tcp mbox: 6[0m
+[0;32mI (673) wifi_init: tcp tx win: 5760[0m
+[0;32mI (673) wifi_init: tcp rx win: 5760[0m
+[0;32mI (683) wifi_init: tcp mss: 1440[0m
+[0;32mI (683) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (683) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (693) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (773) wifi:mode : sta (14:33:5c:38:21:08)[0m
+[0;32mI (773) wifi:enable tsf[0m
+[0;32mI (773) wifi:Set ps type: 0, coexist: 0[0m
+
+[0;32mI (793) wifi:new:<12,0>, old:<1,0>, ap:<255,255>, sta:<12,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (793) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (833) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (843) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (873) wifi:connected with wifi, aid = 8, channel 12, BW20, bssid = 82:7b:91:f8:71:fc[0m
+[0;32mI (873) wifi:security: WPA2-PSK, phy: bgn, rssi: -73, cipher(pairwise:0x3, group:0x3), pmf:0[0m
+[0;32mI (873) wifi:pm start, type: 0[0m
+
+[0;32mI (873) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (993) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (993) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (1943) esp_netif_handlers: sta ip: 10.210.189.4, mask: 255.255.255.0, gw: 10.210.189.38[0m
+[0;32mI (1943) iot: Connecte, IP: 10.210.189.4[0m
+[0;32mI (1943) iot: SNTP: ESP_OK[0m
+[0;32mI (1993) wifi:<ba-add>idx:0 (ifx:0, 82:7b:91:f8:71:fc), tid:0, ssn:3, winSize:64[0m
+[0;32mI (2713) iot: MQTT connecte (TLS ok, broker authentifie)[0m
+[0;32mI (2963) iot: Application confirmee (rollback annule): ESP_OK[0m
+[0;32mI (2983) iot: Etat mise a jour: success (100%)[0m
+[0;32mI (2993) iot: Statut publie (msg_id=15455)[0m
+[0;32mI (32993) iot: Statut publie (msg_id=23920)[0m
+[0;32mI (62993) iot: Statut publie (msg_id=33195)[0m
+[0;32mI (92993) iot: Statut publie (msg_id=8831)[0m
+[0;32mI (122993) iot: Statut publie (msg_id=7528)[0m
+[0;32mI (152993) iot: Statut publie (msg_id=50574)[0m
+[0;32mI (182993) iot: Statut publie (msg_id=21457)[0m
+[0;32mI (212993) iot: Statut publie (msg_id=42976)[0m
+[0;32mI (242993) iot: Statut publie (msg_id=63475)[0m
+[0;32mI (272993) iot: Statut publie (msg_id=26031)[0m
+[0;32mI (302993) iot: Statut publie (msg_id=18023)[0m
+[0;32mI (332993) iot: Statut publie (msg_id=36099)[0m
+[0;32mI (362993) iot: Statut publie (msg_id=24287)[0m
+[0;32mI (392993) iot: Statut publie (msg_id=48849)[0m
+[0;32mI (407883) wifi:state: run -> init (0x1a0)[0m
+[0;32mI (407903) wifi:pm stop, total sleep time: 0 us / 407021391 us[0m
+
+[0;32mI (407903) wifi:<ba-del>idx:0, tid:0[0m
+[0;33mW (407903) iot: Wi-Fi perdu, raison=1, nouvelle tentative[0m
+[1;31mE (407913) esp-tls-mbedtls: read error :-0x004C[0m
+[1;31mE (407913) transport_base: esp_tls_conn_read error, errno=Software caused connection abort[0m
+[1;31mE (407913) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=113[0m
+[1;31mE (407923) iot: MQTT erreur (type 1)[0m
+[1;31mE (407923) mqtt_client: mqtt_process_receive: mqtt_message_receive() returned -2[0m
+[0;32mI (407933) wifi:state: init -> auth (0xb0)[0m
+[0;33mW (407933) iot: MQTT deconnecte (reconnexion automatique)[0m
+[0;32mI (407953) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (407963) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (407963) wifi:state: run -> init (0x4a0)[0m
+[0;33mW (407973) iot: Wi-Fi perdu, raison=4, nouvelle tentative[0m
+[0;33mW (410383) iot: Wi-Fi perdu, raison=201, nouvelle tentative[0m
+[0;33mW (412803) iot: Wi-Fi perdu, raison=201, nouvelle tentative[0m
+[0;33mW (415223) iot: Wi-Fi perdu, raison=201, nouvelle tentative[0m
+[0;32mI (415313) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (415323) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (415353) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (415393) wifi:connected with wifi, aid = 1, channel 12, BW20, bssid = 76:b5:25:4e:42:17[0m
+[0;32mI (415393) wifi:security: WPA2-PSK, phy: bgn, rssi: -84, cipher(pairwise:0x3, group:0x3), pmf:0[0m
+[0;32mI (415403) wifi:pm start, type: 0[0m
+
+[0;32mI (415403) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (415413) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (415413) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (416483) esp_netif_handlers: sta ip: 10.210.189.4, mask: 255.255.255.0, gw: 10.210.189.38[0m
+[0;32mI (416483) iot: Connecte, IP: 10.210.189.4[0m
+[0;32mI (421703) wifi:<ba-add>idx:0 (ifx:0, 76:b5:25:4e:42:17), tid:0, ssn:3, winSize:64[0m
+[0;32mI (422403) iot: MQTT connecte (TLS ok, broker authentifie)[0m
+[0;32mI (422993) iot: Statut publie (msg_id=64915)[0m
+[0;32mI (452993) iot: Statut publie (msg_id=36047)[0m
+[0;32mI (482993) iot: Statut publie (msg_id=60756)[0m
+[0;32mI (512993) iot: Statut publie (msg_id=51707)[0m
+[0;32mI (542993) iot: Statut publie (msg_id=46723)[0m
+[0;32mI (572993) iot: Statut publie (msg_id=60401)[0m
+[0;32mI (602993) iot: Statut publie (msg_id=4721)[0m
+[0;32mI (632993) iot: Statut publie (msg_id=57827)[0m
+[0;32mI (662993) iot: Statut publie (msg_id=50344)[0m
+[0;32mI (692993) iot: Statut publie (msg_id=39363)[0m
+[0;32mI (722993) iot: Statut publie (msg_id=27166)[0m
+[0;32mI (752993) iot: Statut publie (msg_id=18438)[0m
+[0;32mI (782993) iot: Statut publie (msg_id=59290)[0m
+[0;32mI (812993) iot: Statut publie (msg_id=11568)[0m
+[0;32mI (842993) iot: Statut publie (msg_id=5967)[0m
+[0;32mI (872993) iot: Statut publie (msg_id=11498)[0m
+[0;32mI (902993) iot: Statut publie (msg_id=8280)[0m
+[0;32mI (932993) iot: Statut publie (msg_id=58062)[0m
+[0;32mI (962993) iot: Statut publie (msg_id=57318)[0m
+[0;32mI (992993) iot: Statut publie (msg_id=2975)[0m
+[0;32mI (1014823) iot: Etat mise a jour: received (0%)[0m
+[0;32mI (1014833) iot: Etat mise a jour: downloading (0%)[0m
+[0;32mI (1018093) iot: Etat mise a jour: downloading (0%)[0m
+[0;32mI (1018113) iot: Etat mise a jour: downloading (0%)[0m
+[0;32mI (1018143) iot: Etat mise a jour: downloading (1%)[0m
+[0;32mI (1018203) iot: Etat mise a jour: downloading (1%)[0m
+[0;32mI (1018213) iot: Etat mise a jour: downloading (2%)[0m
+[0;32mI (1018243) iot: Etat mise a jour: downloading (2%)[0m
+[0;32mI (1018263) iot: Etat mise a jour: downloading (2%)[0m
+[0;32mI (1018323) iot: Etat mise a jour: downloading (3%)[0m
+[0;32mI (1018353) iot: Etat mise a jour: downloading (3%)[0m
+[0;32mI (1018373) iot: Etat mise a jour: downloading (4%)[0m
+[0;32mI (1018393) iot: Etat mise a jour: downloading (4%)[0m
+[0;32mI (1018443) iot: Etat mise a jour: downloading (5%)[0m
+[0;32mI (1018463) iot: Etat mise a jour: downloading (5%)[0m
+[0;32mI (1018483) iot: Etat mise a jour: downloading (5%)[0m
+[0;32mI (1018503) iot: Etat mise a jour: downloading (6%)[0m
+[0;32mI (1018523) iot: Etat mise a jour: downloading (6%)[0m
+[0;32mI (1018593) iot: Etat mise a jour: downloading (7%)[0m
+[0;32mI (1018613) iot: Etat mise a jour: downloading (7%)[0m
+[0;32mI (1018633) iot: Etat mise a jour: downloading (7%)[0m
+[0;32mI (1018663) iot: Etat mise a jour: downloading (8%)[0m
+[0;32mI (1018713) iot: Etat mise a jour: downloading (8%)[0m
+[0;32mI (1018733) iot: Etat mise a jour: downloading (9%)[0m
+[0;32mI (1018763) iot: Etat mise a jour: downloading (9%)[0m
+[0;32mI (1018773) iot: Etat mise a jour: downloading (10%)[0m
+[0;32mI (1018833) iot: Etat mise a jour: downloading (10%)[0m
+[0;32mI (1018853) iot: Etat mise a jour: downloading (10%)[0m
+[0;32mI (1018873) iot: Etat mise a jour: downloading (11%)[0m
+[0;32mI (1018893) iot: Etat mise a jour: downloading (11%)[0m
+[0;32mI (1018953) iot: Etat mise a jour: downloading (12%)[0m
+[0;32mI (1018963) iot: Etat mise a jour: downloading (12%)[0m
+[0;32mI (1018983) iot: Etat mise a jour: downloading (12%)[0m
+[0;32mI (1019003) iot: Etat mise a jour: downloading (13%)[0m
+[0;32mI (1019103) iot: Etat mise a jour: downloading (13%)[0m
+[0;32mI (1019123) iot: Etat mise a jour: downloading (14%)[0m
+[0;32mI (1019143) iot: Etat mise a jour: downloading (14%)[0m
+[0;32mI (1019163) iot: Etat mise a jour: downloading (15%)[0m
+[0;32mI (1019223) iot: Etat mise a jour: downloading (15%)[0m
+[0;32mI (1019243) iot: Etat mise a jour: downloading (15%)[0m
+[0;32mI (1019263) iot: Etat mise a jour: downloading (16%)[0m
+[0;32mI (1019283) iot: Etat mise a jour: downloading (16%)[0m
+[0;32mI (1019343) iot: Etat mise a jour: downloading (17%)[0m
+[0;32mI (1019363) iot: Etat mise a jour: downloading (17%)[0m
+[0;32mI (1019393) iot: Etat mise a jour: downloading (18%)[0m
+[0;32mI (1019403) iot: Etat mise a jour: downloading (18%)[0m
+[0;32mI (1019463) iot: Etat mise a jour: downloading (18%)[0m
+[0;32mI (1019483) iot: Etat mise a jour: downloading (19%)[0m
+[0;32mI (1019513) iot: Etat mise a jour: downloading (19%)[0m
+[0;32mI (1019533) iot: Etat mise a jour: downloading (20%)[0m
+[0;32mI (1019583) iot: Etat mise a jour: downloading (20%)[0m
+[0;32mI (1019603) iot: Etat mise a jour: downloading (20%)[0m
+[0;32mI (1019613) iot: Etat mise a jour: downloading (21%)[0m
+[0;32mI (1019643) iot: Etat mise a jour: downloading (21%)[0m
+[0;32mI (1019733) iot: Etat mise a jour: downloading (22%)[0m
+[0;32mI (1019753) iot: Etat mise a jour: downloading (22%)[0m
+[0;32mI (1019783) iot: Etat mise a jour: downloading (23%)[0m
+[0;32mI (1019803) iot: Etat mise a jour: downloading (23%)[0m
+[0;32mI (1019853) iot: Etat mise a jour: downloading (23%)[0m
+[0;32mI (1019873) iot: Etat mise a jour: downloading (24%)[0m
+[0;32mI (1019893) iot: Etat mise a jour: downloading (24%)[0m
+[0;32mI (1019913) iot: Etat mise a jour: downloading (25%)[0m
+[0;32mI (1019973) iot: Etat mise a jour: downloading (25%)[0m
+[0;32mI (1019993) iot: Etat mise a jour: downloading (25%)[0m
+[0;32mI (1020013) iot: Etat mise a jour: downloading (26%)[0m
+[0;32mI (1020033) iot: Etat mise a jour: downloading (26%)[0m
+[0;32mI (1020093) iot: Etat mise a jour: downloading (27%)[0m
+[0;32mI (1020103) iot: Etat mise a jour: downloading (27%)[0m
+[0;32mI (1020133) iot: Etat mise a jour: downloading (28%)[0m
+[0;32mI (1020153) iot: Etat mise a jour: downloading (28%)[0m
+[0;32mI (1020203) iot: Etat mise a jour: downloading (28%)[0m
+[0;32mI (1020213) iot: Etat mise a jour: downloading (29%)[0m
+[0;32mI (1020233) iot: Etat mise a jour: downloading (29%)[0m
+[0;32mI (1020263) iot: Etat mise a jour: downloading (30%)[0m
+[0;32mI (1020323) iot: Etat mise a jour: downloading (30%)[0m
+[0;32mI (1020333) iot: Etat mise a jour: downloading (31%)[0m
+[0;32mI (1020363) iot: Etat mise a jour: downloading (31%)[0m
+[0;32mI (1020373) iot: Etat mise a jour: downloading (31%)[0m
+[0;32mI (1020433) iot: Etat mise a jour: downloading (32%)[0m
+[0;32mI (1020453) iot: Etat mise a jour: downloading (32%)[0m
+[0;32mI (1020473) iot: Etat mise a jour: downloading (33%)[0m
+[0;32mI (1020503) iot: Etat mise a jour: downloading (33%)[0m
+[0;32mI (1020553) iot: Etat mise a jour: downloading (33%)[0m
+[0;32mI (1020573) iot: Etat mise a jour: downloading (34%)[0m
+[0;32mI (1020593) iot: Etat mise a jour: downloading (34%)[0m
+[0;32mI (1020613) iot: Etat mise a jour: downloading (35%)[0m
+[0;32mI (1020673) iot: Etat mise a jour: downloading (35%)[0m
+[0;32mI (1020693) iot: Etat mise a jour: downloading (36%)[0m
+[0;32mI (1020713) iot: Etat mise a jour: downloading (36%)[0m
+[0;32mI (1020733) iot: Etat mise a jour: downloading (36%)[0m
+[0;32mI (1020793) iot: Etat mise a jour: downloading (37%)[0m
+[0;32mI (1020813) iot: Etat mise a jour: downloading (37%)[0m
+[0;32mI (1020833) iot: Etat mise a jour: downloading (38%)[0m
+[0;32mI (1020853) iot: Etat mise a jour: downloading (38%)[0m
+[0;32mI (1020923) iot: Etat mise a jour: downloading (38%)[0m
+[0;32mI (1020943) iot: Etat mise a jour: downloading (39%)[0m
+[0;32mI (1020963) iot: Etat mise a jour: downloading (39%)[0m
+[0;32mI (1020983) iot: Etat mise a jour: downloading (40%)[0m
+[0;32mI (1021053) iot: Etat mise a jour: downloading (40%)[0m
+[0;32mI (1021073) iot: Etat mise a jour: downloading (41%)[0m
+[0;32mI (1021093) iot: Etat mise a jour: downloading (41%)[0m
+[0;32mI (1021113) iot: Etat mise a jour: downloading (41%)[0m
+[0;32mI (1021173) iot: Etat mise a jour: downloading (42%)[0m
+[0;32mI (1021193) iot: Etat mise a jour: downloading (42%)[0m
+[0;32mI (1021213) iot: Etat mise a jour: downloading (43%)[0m
+[0;32mI (1021223) iot: Etat mise a jour: downloading (43%)[0m
+[0;32mI (1021283) iot: Etat mise a jour: downloading (44%)[0m
+[0;32mI (1021313) iot: Etat mise a jour: downloading (44%)[0m
+[0;32mI (1021333) iot: Etat mise a jour: downloading (44%)[0m
+[0;32mI (1021353) iot: Etat mise a jour: downloading (45%)[0m
+[0;32mI (1021403) iot: Etat mise a jour: downloading (45%)[0m
+[0;32mI (1021423) iot: Etat mise a jour: downloading (46%)[0m
+[0;32mI (1021443) iot: Etat mise a jour: downloading (46%)[0m
+[0;32mI (1021463) iot: Etat mise a jour: downloading (46%)[0m
+[0;32mI (1021523) iot: Etat mise a jour: downloading (47%)[0m
+[0;32mI (1021533) iot: Etat mise a jour: downloading (47%)[0m
+[0;32mI (1021563) iot: Etat mise a jour: downloading (48%)[0m
+[0;32mI (1021573) iot: Etat mise a jour: downloading (48%)[0m
+[0;32mI (1021633) iot: Etat mise a jour: downloading (49%)[0m
+[0;32mI (1021653) iot: Etat mise a jour: downloading (49%)[0m
+[0;32mI (1021673) iot: Etat mise a jour: downloading (49%)[0m
+[0;32mI (1021693) iot: Etat mise a jour: downloading (50%)[0m
+[0;32mI (1021763) iot: Etat mise a jour: downloading (50%)[0m
+[0;32mI (1021773) iot: Etat mise a jour: downloading (51%)[0m
+[0;32mI (1021793) iot: Etat mise a jour: downloading (51%)[0m
+[0;32mI (1021823) iot: Etat mise a jour: downloading (51%)[0m
+[0;32mI (1021893) iot: Etat mise a jour: downloading (52%)[0m
+[0;32mI (1021903) iot: Etat mise a jour: downloading (52%)[0m
+[0;32mI (1021933) iot: Etat mise a jour: downloading (53%)[0m
+[0;32mI (1021953) iot: Etat mise a jour: downloading (53%)[0m
+[0;32mI (1022023) iot: Etat mise a jour: downloading (54%)[0m
+[0;32mI (1022043) iot: Etat mise a jour: downloading (54%)[0m
+[0;32mI (1022063) iot: Etat mise a jour: downloading (54%)[0m
+[0;32mI (1022083) iot: Etat mise a jour: downloading (55%)[0m
+[0;32mI (1022133) iot: Etat mise a jour: downloading (55%)[0m
+[0;32mI (1022153) iot: Etat mise a jour: downloading (56%)[0m
+[0;32mI (1022173) iot: Etat mise a jour: downloading (56%)[0m
+[0;32mI (1022193) iot: Etat mise a jour: downloading (57%)[0m
+[0;32mI (1022253) iot: Etat mise a jour: downloading (57%)[0m
+[0;32mI (1022273) iot: Etat mise a jour: downloading (57%)[0m
+[0;32mI (1022283) iot: Etat mise a jour: downloading (58%)[0m
+[0;32mI (1022313) iot: Etat mise a jour: downloading (58%)[0m
+[0;32mI (1022373) iot: Etat mise a jour: downloading (59%)[0m
+[0;32mI (1022393) iot: Etat mise a jour: downloading (59%)[0m
+[0;32mI (1022413) iot: Etat mise a jour: downloading (59%)[0m
+[0;32mI (1022433) iot: Etat mise a jour: downloading (60%)[0m
+[0;32mI (1022493) iot: Etat mise a jour: downloading (60%)[0m
+[0;32mI (1022523) iot: Etat mise a jour: downloading (61%)[0m
+[0;32mI (1022543) iot: Etat mise a jour: downloading (61%)[0m
+[0;32mI (1022563) iot: Etat mise a jour: downloading (62%)[0m
+[0;32mI (1022613) iot: Etat mise a jour: downloading (62%)[0m
+[0;32mI (1022623) iot: Etat mise a jour: downloading (62%)[0m
+[0;32mI (1022653) iot: Etat mise a jour: downloading (63%)[0m
+[0;32mI (1022673) iot: Etat mise a jour: downloading (63%)[0m
+[0;32mI (1022733) iot: Etat mise a jour: downloading (64%)[0m
+[0;32mI (1022753) iot: Etat mise a jour: downloading (64%)[0m
+[0;32mI (1022773) iot: Etat mise a jour: downloading (64%)[0m
+[0;32mI (1022793) iot: Etat mise a jour: downloading (65%)[0m
+[0;32mI (1022853) iot: Etat mise a jour: downloading (65%)[0m
+[0;32mI (1022873) iot: Etat mise a jour: downloading (66%)[0m
+[0;32mI (1022893) iot: Etat mise a jour: downloading (66%)[0m
+[0;32mI (1022913) iot: Etat mise a jour: downloading (67%)[0m
+[0;32mI (1022963) iot: Etat mise a jour: downloading (67%)[0m
+[0;32mI (1022983) iot: Etat mise a jour: downloading (67%)[0m
+[0;32mI (1023003) iot: Etat mise a jour: downloading (68%)[0m
+[0;32mI (1023023) iot: Etat mise a jour: downloading (68%)[0m
+[0;32mI (1023033) iot: Statut publie (msg_id=28513)[0m
+[0;32mI (1023093) iot: Etat mise a jour: downloading (69%)[0m
+[0;32mI (1023113) iot: Etat mise a jour: downloading (69%)[0m
+[0;32mI (1023133) iot: Etat mise a jour: downloading (70%)[0m
+[0;32mI (1023153) iot: Etat mise a jour: downloading (70%)[0m
+[0;32mI (1023213) iot: Etat mise a jour: downloading (70%)[0m
+[0;32mI (1023233) iot: Etat mise a jour: downloading (71%)[0m
+[0;32mI (1023253) iot: Etat mise a jour: downloading (71%)[0m
+[0;32mI (1023273) iot: Etat mise a jour: downloading (72%)[0m
+[0;32mI (1023333) iot: Etat mise a jour: downloading (72%)[0m
+[0;32mI (1023363) iot: Etat mise a jour: downloading (72%)[0m
+[0;32mI (1023373) iot: Etat mise a jour: downloading (73%)[0m
+[0;32mI (1023403) iot: Etat mise a jour: downloading (73%)[0m
+[0;32mI (1023453) iot: Etat mise a jour: downloading (74%)[0m
+[0;32mI (1023473) iot: Etat mise a jour: downloading (74%)[0m
+[0;32mI (1023493) iot: Etat mise a jour: downloading (75%)[0m
+[0;32mI (1023513) iot: Etat mise a jour: downloading (75%)[0m
+[0;32mI (1023563) iot: Etat mise a jour: downloading (75%)[0m
+[0;32mI (1023583) iot: Etat mise a jour: downloading (76%)[0m
+[0;32mI (1023603) iot: Etat mise a jour: downloading (76%)[0m
+[0;32mI (1023623) iot: Etat mise a jour: downloading (77%)[0m
+[0;32mI (1023683) iot: Etat mise a jour: downloading (77%)[0m
+[0;32mI (1023703) iot: Etat mise a jour: downloading (77%)[0m
+[0;32mI (1023723) iot: Etat mise a jour: downloading (78%)[0m
+[0;32mI (1023743) iot: Etat mise a jour: downloading (78%)[0m
+[0;32mI (1023813) iot: Etat mise a jour: downloading (79%)[0m
+[0;32mI (1023833) iot: Etat mise a jour: downloading (79%)[0m
+[0;32mI (1023853) iot: Etat mise a jour: downloading (80%)[0m
+[0;32mI (1023873) iot: Etat mise a jour: downloading (80%)[0m
+[0;32mI (1023933) iot: Etat mise a jour: downloading (80%)[0m
+[0;32mI (1023953) iot: Etat mise a jour: downloading (81%)[0m
+[0;32mI (1023973) iot: Etat mise a jour: downloading (81%)[0m
+[0;32mI (1023983) iot: Etat mise a jour: downloading (82%)[0m
+[0;32mI (1024043) iot: Etat mise a jour: downloading (82%)[0m
+[0;32mI (1024063) iot: Etat mise a jour: downloading (83%)[0m
+[0;32mI (1024093) iot: Etat mise a jour: downloading (83%)[0m
+[0;32mI (1024103) iot: Etat mise a jour: downloading (83%)[0m
+[0;32mI (1024173) iot: Etat mise a jour: downloading (84%)[0m
+[0;32mI (1024193) iot: Etat mise a jour: downloading (84%)[0m
+[0;32mI (1024213) iot: Etat mise a jour: downloading (85%)[0m
+[0;32mI (1024233) iot: Etat mise a jour: downloading (85%)[0m
+[0;32mI (1024293) iot: Etat mise a jour: downloading (85%)[0m
+[0;32mI (1024303) iot: Etat mise a jour: downloading (86%)[0m
+[0;32mI (1024333) iot: Etat mise a jour: downloading (86%)[0m
+[0;32mI (1024353) iot: Etat mise a jour: downloading (87%)[0m
+[0;32mI (1024403) iot: Etat mise a jour: downloading (87%)[0m
+[0;32mI (1024413) iot: Etat mise a jour: downloading (88%)[0m
+[0;32mI (1024443) iot: Etat mise a jour: downloading (88%)[0m
+[0;32mI (1024463) iot: Etat mise a jour: downloading (88%)[0m
+[0;32mI (1024543) iot: Etat mise a jour: downloading (89%)[0m
+[0;32mI (1024553) iot: Etat mise a jour: downloading (89%)[0m
+[0;32mI (1024573) iot: Etat mise a jour: downloading (90%)[0m
+[0;32mI (1024603) iot: Etat mise a jour: downloading (90%)[0m
+[0;32mI (1024663) iot: Etat mise a jour: downloading (90%)[0m
+[0;32mI (1024673) iot: Etat mise a jour: downloading (91%)[0m
+[0;32mI (1024703) iot: Etat mise a jour: downloading (91%)[0m
+[0;32mI (1024713) iot: Etat mise a jour: downloading (92%)[0m
+[0;32mI (1024773) iot: Etat mise a jour: downloading (92%)[0m
+[0;32mI (1024793) iot: Etat mise a jour: downloading (93%)[0m
+[0;32mI (1024823) iot: Etat mise a jour: downloading (93%)[0m
+[0;32mI (1024833) iot: Etat mise a jour: downloading (93%)[0m
+[0;32mI (1024893) iot: Etat mise a jour: downloading (94%)[0m
+[0;32mI (1024913) iot: Etat mise a jour: downloading (94%)[0m
+[0;32mI (1024933) iot: Etat mise a jour: downloading (95%)[0m
+[0;32mI (1024953) iot: Etat mise a jour: downloading (95%)[0m
+[0;32mI (1025013) iot: Etat mise a jour: downloading (96%)[0m
+[0;32mI (1025033) iot: Etat mise a jour: downloading (96%)[0m
+[0;32mI (1025043) iot: Etat mise a jour: downloading (96%)[0m
+[0;32mI (1025073) iot: Etat mise a jour: downloading (97%)[0m
+[0;32mI (1025143) iot: Etat mise a jour: downloading (97%)[0m
+[0;32mI (1025163) iot: Etat mise a jour: downloading (98%)[0m
+[0;32mI (1025183) iot: Etat mise a jour: downloading (98%)[0m
+[0;32mI (1025203) iot: Etat mise a jour: downloading (98%)[0m
+[0;32mI (1025243) iot: Etat mise a jour: downloading (99%)[0m
+[0;32mI (1025263) iot: Etat mise a jour: downloading (99%)[0m
+[0;32mI (1025273) iot: Etat mise a jour: downloading (100%)[0m
+[0;32mI (1025293) iot: Etat mise a jour: verifying (100%)[0m
+[0;32mI (1025293) esp_image: segment 0: paddr=00020020 vaddr=3f400020 size=23c80h (146560) map[0m
+[0;32mI (1025343) esp_image: segment 1: paddr=00043ca8 vaddr=3ffb0000 size=04678h ( 18040) [0m
+[0;32mI (1025353) esp_image: segment 2: paddr=00048328 vaddr=40080000 size=07cf0h ( 31984) [0m
+[0;32mI (1025363) esp_image: segment 3: paddr=00050020 vaddr=400d0020 size=b0d1ch (724252) map[0m
+[0;32mI (1025603) esp_image: segment 4: paddr=00100d44 vaddr=40087cf0 size=0d9f8h ( 55800) [0m
+[0;32mI (1025623) esp_image: segment 5: paddr=0010e744 vaddr=50000000 size=00028h (    40) [0m
+[0;32mI (1025643) iot: Etat mise a jour: installing (100%)[0m
+[0;32mI (1025643) esp_image: segment 0: paddr=00020020 vaddr=3f400020 size=23c80h (146560) map[0m
+[0;32mI (1025693) esp_image: segment 1: paddr=00043ca8 vaddr=3ffb0000 size=04678h ( 18040) [0m
+[0;32mI (1025703) esp_image: segment 2: paddr=00048328 vaddr=40080000 size=07cf0h ( 31984) [0m
+[0;32mI (1025723) esp_image: segment 3: paddr=00050020 vaddr=400d0020 size=b0d1ch (724252) map[0m
+[0;32mI (1025963) esp_image: segment 4: paddr=00100d44 vaddr=40087cf0 size=0d9f8h ( 55800) [0m
+[0;32mI (1025983) esp_image: segment 5: paddr=0010e744 vaddr=50000000 size=00028h (    40) [0m
+[0;32mI (1025993) iot: Etat mise a jour: rebooting (100%)[0m
+[0;32mI (1027493) wifi:state: run -> init (0x0)[0m
+[0;32mI (1027503) wifi:pm stop, total sleep time: 0 us / 612099843 us[0m
+
+[0;32mI (1027503) wifi:<ba-del>idx:0, tid:0[0m
+[0;33mW (1027503) iot: Wi-Fi perdu, raison=8, nouvelle tentative[0m
+[1;31mE (1027513) esp-tls-mbedtls: read error :-0x004C[0m
+[1;31mE (1027513) transport_base: esp_tls_conn_read error, errno=Software caused connection abort[0m
+[1;31mE (1027513) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=113[0m
+[1;31mE (1027523) iot: MQTT erreur (type 1)[0m
+[1;31mE (1027523) mqtt_client: mqtt_process_receive: mqtt_message_receive() returned -2[0m
+[0;32mI (1027533) wifi:flush txq[0m
+[0;33mW (1027533) iot: MQTT deconnecte (reconnexion automatique)[0m
+[0;32mI (1027533) wifi:stop sw txq[0m
+[0;32mI (1027543) wifi:lmac stop hw txq[0m
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15896
+load:0x40080400,len:3988
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.1 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Nov 22 2026 23:50:43[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (31) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00011000 00006000[0m
+[0;32mI (62) boot:  1 otadata          OTA data         01 00 00017000 00002000[0m
+[0;32mI (69) boot:  2 phy_init         RF data          01 01 00019000 00001000[0m
+[0;32mI (75) boot:  3 ota_0            OTA app          00 10 00020000 001e0000[0m
+[0;32mI (82) boot:  4 ota_1            OTA app          00 11 00200000 001e0000[0m
+[0;32mI (88) boot: End of partition table[0m
+[0;32mI (99) esp_image: segment 0: paddr=00020020 vaddr=3f400020 size=23c80h (146560) map[0m
+[0;32mI (152) esp_image: segment 1: paddr=00043ca8 vaddr=3ffb0000 size=04678h ( 18040) load[0m
+[0;32mI (159) esp_image: segment 2: paddr=00048328 vaddr=40080000 size=07cf0h ( 31984) load[0m
+[0;32mI (172) esp_image: segment 3: paddr=00050020 vaddr=400d0020 size=b0d1ch (724252) map[0m
+[0;32mI (431) esp_image: segment 4: paddr=00100d44 vaddr=40087cf0 size=0d9f8h ( 55800) load[0m
+[0;32mI (454) esp_image: segment 5: paddr=0010e744 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (465) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (465) boot: Disabling RNG early entropy source...[0m
+[0;32mI (475) cpu_start: Multicore app[0m
+[0;32mI (484) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (484) cpu_start: Pro cpu start user code[0m
+[0;32mI (484) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (486) app_init: Application information:[0m
+[0;32mI (489) app_init: Project name:     wifi_base[0m
+[0;32mI (494) app_init: App version:      1.8.14[0m
+[0;32mI (497) app_init: Compile time:     Nov 22 2026 23:56:36[0m
+[0;32mI (502) app_init: ELF file SHA256:  d121dc442...[0m
+[0;32mI (507) app_init: ESP-IDF:          v6.1[0m
+[0;32mI (510) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (514) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (518) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (522) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (528) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (533) heap_init: At 3FFBA520 len 00025AE0 (150 KiB): DRAM[0m
+[0;32mI (539) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (544) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (550) heap_init: At 400956E8 len 0000A918 (42 KiB): IRAM[0m
+[0;32mI (557) spi_flash: detected chip: generic[0m
+[0;32mI (559) spi_flash: flash io: dio[0m
+[0;32mI (564) main_task: Started on CPU0[0m
+[0;32mI (564) main_task: Calling app_main()[0m
+[0;32mI (594) iot: Application wifi_base version 1.8.14[0m
+[0;32mI (594) iot: Demo RGB LED: blue[0m
+[0;33mW (604) iot: Nouvelle application a valider (health check 90 s)[0m
+[0;32mI (604) main_task: Returned from app_main()[0m
+[0;32mI (614) wifi:wifi driver task: 3ffc3994, prio:23, stack:6656, core=0[0m
+[0;32mI (624) wifi:wifi firmware version: e12a754[0m
+[0;32mI (624) wifi:wifi certification version: v7.0[0m
+[0;32mI (624) wifi:config NVS flash: enabled[0m
+[0;32mI (624) wifi:config nano formatting: disabled[0m
+[0;32mI (634) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (634) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (634) wifi:Init management short buffer num: 32[0m
+[0;32mI (644) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (644) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (654) wifi:Init static rx buffer num: 10[0m
+[0;32mI (654) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (664) wifi_init: rx ba win: 6[0m
+[0;32mI (664) wifi_init: accept mbox: 6[0m
+[0;32mI (664) wifi_init: tcpip mbox: 32[0m
+[0;32mI (664) wifi_init: udp mbox: 6[0m
+[0;32mI (674) wifi_init: tcp mbox: 6[0m
+[0;32mI (674) wifi_init: tcp tx win: 5760[0m
+[0;32mI (674) wifi_init: tcp rx win: 5760[0m
+[0;32mI (684) wifi_init: tcp mss: 1440[0m
+[0;32mI (684) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (684) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (694) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (774) wifi:mode : sta (14:33:5c:38:21:08)[0m
+[0;32mI (774) wifi:enable tsf[0m
+[0;32mI (774) wifi:Set ps type: 0, coexist: 0[0m
+
+[0;32mI (814) wifi:new:<12,0>, old:<1,0>, ap:<255,255>, sta:<12,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (814) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (824) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (844) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (874) wifi:connected with wifi, aid = 3, channel 12, BW20, bssid = 76:b5:25:4e:42:17[0m
+[0;32mI (874) wifi:security: WPA2-PSK, phy: bgn, rssi: -77, cipher(pairwise:0x3, group:0x3), pmf:0[0m
+[0;32mI (874) wifi:pm start, type: 0[0m
+
+[0;32mI (884) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (914) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (914) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (1934) esp_netif_handlers: sta ip: 10.210.189.4, mask: 255.255.255.0, gw: 10.210.189.38[0m
+[0;32mI (1934) iot: Connecte, IP: 10.210.189.4[0m
+[0;32mI (1934) iot: SNTP: ESP_OK[0m
+[0;32mI (1954) wifi:<ba-add>idx:0 (ifx:0, 76:b5:25:4e:42:17), tid:0, ssn:3, winSize:64[0m
+[0;32mI (2674) iot: MQTT connecte (TLS ok, broker authentifie)[0m
+[0;32mI (2954) iot: Application confirmee (rollback annule): ESP_OK[0m
+[0;32mI (2964) iot: Etat mise a jour: success (100%)[0m
+[0;32mI (2984) iot: Statut publie (msg_id=25849)[0m
+[0;32mI (32984) iot: Statut publie (msg_id=613)[0m
+[0;32mI (62984) iot: Statut publie (msg_id=45708)[0m

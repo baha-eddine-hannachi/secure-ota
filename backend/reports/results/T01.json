@@ -1,0 +1,18 @@
+{
+  "id": "T01",
+  "title": "Mise à jour OTA nominale 1.0.0 → 1.2.0",
+  "stage": "1",
+  "status": "PASS",
+  "fw_from": "1.0.0",
+  "fw_to": "1.2.0",
+  "date": "2026-11-11T19:24:14.280Z",
+  "operator": "User-reported",
+  "summary": "OTA 1.0.0 -> 1.2.0, statuts received..success, démarrage depuis ota_1 à 0x200000, backend affiche 1.2.0.",
+  "observed": [
+    "Statuts signalés: received, downloading, verifying, installing, rebooting, success.",
+    "Partition signalée: ota_1 à 0x200000.",
+    "Version backend signalée: 1.2.0."
+  ],
+  "evidence": [],
+  "notes": "Statut PASS rapporté par l’utilisateur dans le contexte projet; les logs moniteur d’origine ne sont pas joints et le résultat n’a pas été vérifié indépendamment. La date est celle de création de cet enregistrement, pas une date d’exécution vérifiée."
+}
